@@ -1,6 +1,6 @@
 {
   "name": "hard9stats-web",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Hard 9 Stats",
   "private": true,
   "keywords": [
@@ -22,6 +22,8 @@
   "dependencies": {
     "react": "19.3.0",
     "react-dom": "19.3.0"
+  },
+  "engines": {
+    "node": "v24.21.0"
   }
 }
-

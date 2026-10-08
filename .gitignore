@@ -26,6 +26,9 @@ pnpm-debug.log*
 !.env.example
 *.local
 
+# Local agent configuration
+.codex/
+
 # IDE/editor
 .idea/
 .vscode/

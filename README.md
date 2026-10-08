@@ -1,13 +1,13 @@
 # hard9stats-web
 
-Hard 9 Stats is a React single-page dashboard for exploring sports-market statistics. The current matchup and chart values are fictional examples, not live odds.
+Hard9Stats is a React single-page app for tracking MLB postseason rounds, with a PDF report planned for each round. It does not display current game odds.
 
 ## Tech Stack
 
 - UI: React 19.3 with React DOM and JSX
 - Build/dev server: Vite 8.3 with the React plugin
 - Styling: Plain responsive CSS
-- Data: Fictional sample matchups; no backend or live odds source yet
+- Data: MLB postseason round tracker with PDF reports planned; no backend or live odds feed
 - Runtime: Node.js and npm for development and builds
 
 ## Requirements

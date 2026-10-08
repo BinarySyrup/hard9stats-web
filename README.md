@@ -8,11 +8,11 @@ Hard9Stats is a React single-page app for tracking MLB postseason rounds, with a
 - Build/dev server: Vite 8.3 with the React plugin
 - Styling: Plain responsive CSS
 - Data: MLB postseason round tracker with PDF reports planned; no backend or live odds feed
-- Runtime: Node.js v24.21.0 and npm for development and builds
+- Runtime: Node.js 24.13.0 and npm for development and builds
 
 ## Requirements
 
-- Node.js v24.21.0
+- Node.js 24.13.0
 - npm
 
 ## Getting Started

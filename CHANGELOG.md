@@ -17,4 +17,4 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 - League navigation with coming-soon states for NFL, NHL, and NBA.
 - Responsive Hard9Stats branding with the supplied wordmark and dice icon.
 - React, React DOM, Vite, and the React plugin pinned to release versions.
-- Node.js `v24.21.0` runtime requirement.
+- Node.js `24.13.0` runtime requirement.

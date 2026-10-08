@@ -3,9 +3,12 @@ node_modules/
 
 # Build output
 dist/
+dist-ssr/
 build/
+coverage/
 
 # Caches
+.vite/
 .cache/
 .parcel-cache/
 .eslintcache
@@ -21,6 +24,7 @@ pnpm-debug.log*
 .env
 .env.*
 !.env.example
+*.local
 
 # IDE/editor
 .idea/

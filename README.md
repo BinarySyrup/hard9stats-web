@@ -1,61 +1,48 @@
 # hard9stats-web
 
-Hard 9 Stats
+Hard 9 Stats is a React single-page dashboard for exploring sports-market statistics. The current matchup and chart values are fictional examples, not live odds.
 
-Live site: `https://www.hard9stats.com`
+## Tech Stack
 
-## Prerequisites
+- UI: React 19.3 with React DOM and JSX
+- Build/dev server: Vite 8.3 with the React plugin
+- Styling: Plain responsive CSS
+- Data: Fictional sample matchups; no backend or live odds source yet
+- Runtime: Node.js and npm for development and builds
 
-- Node.js 18+ (recommended)
-- npm (comes with Node.js)
+## Requirements
+
+- Node.js 18 or newer
+- npm
 
 ## Getting Started
 
-1. Install dependencies:
+Install dependencies and start the Vite development server:
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+npm run dev
+```
 
-2. Start the development server:
+`npm start` also starts the dev server and opens a browser.
 
-   ```bash
-   npm start
-   ```
-
-   This runs `webpack-dev-server` and opens the site in your browser.
-
-## Build for Production
-
-Create an optimized production build:
+## Build
 
 ```bash
 npm run build
+npm run preview
 ```
 
-Build output is generated in the `dist/` directory.
-
-## Available Scripts
-
-- `npm start` � run local dev server with hot reload
-- `npm run build` � create production bundle in `dist/`
-- `npm test` � placeholder script (currently not configured)
+Vite writes the production build to `dist/`.
 
 ## Project Structure
 
-- `index.html` � main HTML entry file
-- `js/` � JavaScript source files
-- `css/` � stylesheet files
-- `img/` � images and static visual assets
-- `webpack.common.js` � shared webpack config
-- `webpack.config.dev.js` � development webpack config
-- `webpack.config.prod.js` � production webpack config
-
-## Notes
-
-- `node_modules/`, `dist/`, and local IDE files are ignored via `.gitignore`.
-- Keep `package-lock.json` committed for reproducible installs.
+- `index.html` — Vite entry point
+- `js/app.jsx` — React application and components
+- `css/style.css` — responsive styles
+- `public/` — static assets copied to production builds
+- `vite.config.js` — Vite configuration
 
 ## License
 
-This project is licensed under the Apache License 2.0. See `LICENSE.txt` for full terms.
+Apache License 2.0. See `LICENSE.txt` for details.

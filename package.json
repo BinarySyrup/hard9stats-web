@@ -1,13 +1,13 @@
 {
   "name": "hard9stats-web",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "description": "Hard 9 Stats",
   "private": true,
   "keywords": [
     ""
   ],
   "license": "Apache-2.0",
-  "author": "",
+  "author": "Binary Syrup",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",

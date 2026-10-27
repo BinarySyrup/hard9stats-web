@@ -56,3 +56,4 @@ Vite writes the production build to `dist/`.
 ## License
 
 Apache License 2.0. See `LICENSE.txt` for details.
+

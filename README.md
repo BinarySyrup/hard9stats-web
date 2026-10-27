@@ -1,13 +1,13 @@
 # hard9stats-web
 
-Hard9Stats is an open-source sports stats site built as a React single-page app. Its MLB postseason tracker links to the 2026 Wild Card Series, Division Series, and League Championship Series PDF reports; the World Series report is forthcoming. NFL, NHL, and NBA sections are placeholders while those league stats are in development. The app does not display live scores or current game odds.
+Hard9Stats is an open-source sports stats site built as a React single-page app. Its MLB postseason tracker links to the 2026 Wild Card Series, Division Series, League Championship Series, and World Series PDF reports. NFL, NHL, and NBA sections are placeholders while those league stats are in development. The app does not display live scores or current game odds.
 
 ## Tech Stack
 
 - UI: React 19.3 with React DOM and JSX
 - Build/dev server: Vite 8.3 with the React plugin
 - Styling: Plain responsive CSS
-- Data: MLB postseason round tracker with three 2026 PDF reports available; no backend or live data feed
+- Data: MLB postseason round tracker with four 2026 PDF reports available; no backend or live data feed
 - Runtime: Node.js 24.13.0 and npm for development and builds
 
 ## Requirements

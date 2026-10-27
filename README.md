@@ -26,6 +26,16 @@ npm run dev
 
 `npm start` also starts the dev server and opens a browser.
 
+## Environment Variables
+
+Copy `.env.example` to `.env.local` and replace the example value with your Google Analytics 4 web stream measurement ID. Restart the Vite dev server after changing environment variables.
+
+| Variable | Purpose | Required | Example |
+| --- | --- | --- | --- |
+| `VITE_GA_MEASUREMENT_ID` | Google Analytics 4 web stream measurement ID | No | `G-XXXXXXXXXX` |
+
+Vite reads this variable when starting the dev server or building the app. Set it in the production build environment to enable analytics there. If it is unset, analytics is disabled. Variables prefixed with `VITE_` are included in client-side code, so do not use this prefix for secrets.
+
 ## Build
 
 ```bash

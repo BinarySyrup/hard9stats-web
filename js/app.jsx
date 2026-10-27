@@ -1,5 +1,6 @@
 import { StrictMode, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { initializeAnalytics } from './analytics.js';
 import reversedWordmark from '../img/h9s-logo/hard9stats-logo-reversed.svg';
 import diceIcon from '../img/h9s-icons/favicon-dice.svg';
 import '../css/style.css';
@@ -106,4 +107,5 @@ function App() {
     </>
   );
 }
+initializeAnalytics();
 createRoot(document.getElementById('root')).render(<StrictMode><App /></StrictMode>);

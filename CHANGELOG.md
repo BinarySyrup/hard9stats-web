@@ -6,6 +6,9 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 ## [Unreleased]
 
+### Added
+- Optional Google Analytics 4 tracking, configured with a Vite environment variable.
+
 ## [1.1.0] - 2026-10-27
 
 ### Added

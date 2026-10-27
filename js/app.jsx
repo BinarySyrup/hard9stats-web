@@ -1,5 +1,6 @@
 import { StrictMode, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { initializeAnalytics } from './analytics.js';
 import reversedWordmark from '../img/h9s-logo/hard9stats-logo-reversed.svg';
 import diceIcon from '../img/h9s-icons/favicon-dice.svg';
 import '../css/style.css';
@@ -10,10 +11,10 @@ const comingSoonMessages = {
   NBA: ['The numbers are warming up.', 'Tip-off is coming soon.'],
 };
 const postseasonRounds = [
-  { number: 'ROUND 01', name: 'Wild Card Series' },
-  { number: 'ROUND 02', name: 'Division Series' },
-  { number: 'ROUND 03', name: 'League Championship Series' },
-  { number: 'ROUND 04', name: 'World Series' },
+  { number: 'ROUND 01', name: 'Wild Card Series', href: 'https://cdn.hard9stats.com/reports/mlb/2026/H9S-MLB-2026-Wild-Card-Series.pdf' },
+  { number: 'ROUND 02', name: 'Division Series', href: 'https://cdn.hard9stats.com/reports/mlb/2026/H9S-MLB-2026-League-Division-Series.pdf' },
+  { number: 'ROUND 03', name: 'League Championship Series', href: 'https://cdn.hard9stats.com/reports/mlb/2026/H9S-MLB-2026-League-Championship-Series.pdf' },
+  { number: 'ROUND 04', name: 'World Series', href: 'https://cdn.hard9stats.com/reports/mlb/2026/H9S-MLB-2026-World-Series.pdf' },
 ];
 function Header() {
   const [activeSection, setActiveSection] = useState(() => window.location.hash || '#top');
@@ -68,9 +69,9 @@ function Snapshot() {
 function Markets({ selectedSport, onSelectSport }) {
   const isMlb = selectedSport === 'MLB';
   const sectionDescription = isMlb
-    ? 'Follow the MLB postseason round by round. A PDF report for each round is on the way.'
+    ? 'Follow the MLB postseason round by round. The 2026 reports for all four rounds are available now.'
     : 'League-specific stats are still in development.';
-  return <section className="markets-section" id="markets"><div className="section-heading"><div><p className="eyebrow"><span /> {isMlb ? 'POSTSEASON TRACKER' : 'THE BOARD'}</p><h2>{isMlb ? 'Postseason, round by round.' : 'Markets at a glance.'}</h2><p className="section-description">{sectionDescription}</p></div></div><div className="market-toolbar"><div className="sport-filters" role="group" aria-label="Filter by league">{sports.map((sport) => <button aria-pressed={selectedSport === sport} className={`filter-button${selectedSport === sport ? ' is-selected' : ''}`} key={sport} onClick={() => onSelectSport(sport)} type="button">{sport}</button>)}</div></div>{isMlb ? <div className="report-grid">{postseasonRounds.map(({ number, name }) => <article className="report-card" key={name}><span className="report-round">{number}</span><h3>{name}</h3><span className="report-status">PDF REPORT COMING SOON</span></article>)}</div> : <div className="coming-soon" role="status"><span className="coming-soon-label">{selectedSport} / COMING SOON</span><p>{comingSoonMessages[selectedSport][0]}<br />{comingSoonMessages[selectedSport][1]}</p></div>}</section>;
+  return <section className="markets-section" id="markets"><div className="section-heading"><div><p className="eyebrow"><span /> {isMlb ? 'POSTSEASON TRACKER' : 'THE BOARD'}</p><h2>{isMlb ? 'Postseason, round by round.' : 'Markets at a glance.'}</h2><p className="section-description">{sectionDescription}</p></div></div><div className="market-toolbar"><div className="sport-filters" role="group" aria-label="Filter by league">{sports.map((sport) => <button aria-pressed={selectedSport === sport} className={`filter-button${selectedSport === sport ? ' is-selected' : ''}`} key={sport} onClick={() => onSelectSport(sport)} type="button">{sport}</button>)}</div></div>{isMlb ? <div className="report-grid">{postseasonRounds.map(({ number, name, href }) => <article className="report-card" key={name}><span className="report-round">{number}</span><h3>{name}</h3>{href ? <a className="report-status report-link" href={href} target="_blank" rel="noopener noreferrer" aria-label={`Open the 2026 ${name} PDF report in a new tab`}>VIEW PDF REPORT</a> : <span className="report-status">PDF REPORT COMING SOON</span>}</article>)}</div> : <div className="coming-soon" role="status"><span className="coming-soon-label">{selectedSport} / COMING SOON</span><p>{comingSoonMessages[selectedSport][0]}<br />{comingSoonMessages[selectedSport][1]}</p></div>}</section>;
 }
 function App() {
   const [selectedSport, setSelectedSport] = useState('MLB');
@@ -106,4 +107,5 @@ function App() {
     </>
   );
 }
+initializeAnalytics();
 createRoot(document.getElementById('root')).render(<StrictMode><App /></StrictMode>);

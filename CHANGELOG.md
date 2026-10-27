@@ -4,7 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning where practical.
 
-## [Unreleased]
+## [1.1.0] - 2026-10-27
+
+### Added
+- Clickable PDF report links for all four 2026 MLB postseason rounds, including the World Series.
+- Styling for report links and accessible labels indicating that reports open in a new tab.
+- Optional Google Analytics 4 tracking, configured with a Vite environment variable.
+
+### Changed
+- Updated the postseason tracker and README to show that all four 2026 reports are available.
+
+### Removed
+- Removed duplicate `LICENSE` file.
 
 ## [1.0.0] - 2026-10-08
 
